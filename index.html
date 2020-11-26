@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title> Choose Your Karaoke Song </title>  <!--TODO: change title -->
+
+    <script src="http://d3js.org/d3.v4.min.js"></script> <!-- including D3 first -->
+
+    <script src="main.js"></script>
+
+    <link rel="stylesheet" href="./style.css"> <!-- inclduing styles, and fonts? -->
+
+</head>
+
+
+<body>
+    <div class="title"> 
+        <h1> Choose Your Karoke Song </h1> 
+        <p> Intro paragrah into the dataset, what the slider does, and how to use it. </p> <!-- TODO: change this too -->
+
+    </div>     
+        
+    <div class="soundboard">
+        <div class="slider-container">
+            <span class="bar">
+                <span class="fill">
+                </span>
+            </span>
+            <input type="range" id="length_slider" class="length_slider" min="0" max ="100" value= "50">
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script>
+        var $slider = $("#length_slider");
+        var $fill = $(".bar .fill");
+
+        function setBar() {
+            var min = parseInt($slider.attr("min"));
+            var max = parseInt($slider.attr("max"));
+            var value = parseInt($slider.val());
+            var percent = ((value - min) / (max - min)) * 100;
+
+            $fill.css("height", percent + "%"); 
+        }
+        $slider.on("input", setBar);
+
+        setBar();
+    </script>
+
+    
+   
+</body>
+
+    <!-- TODO: add title for sliders, etc -->
+
+</html>
