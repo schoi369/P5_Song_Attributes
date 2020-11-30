@@ -10,9 +10,15 @@ h1 { /* TODO: customize header color, font etc */
     font-size: 2.0em;
 }
 
-p { /* TODO: customize paragraph color, etc */
+p0 { /* TODO: customize paragraph color, etc */
     color: black;
     font-size: 0.9em;
+}
+p1 {
+    position: relative; 
+    left: -30px;
+    bottom: -280px;
+    text-align: "center";
 }
 
 body {
