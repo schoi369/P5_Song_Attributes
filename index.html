@@ -5,19 +5,13 @@
     <meta charset="UTF-8">
     <title> Choose Your Karaoke Song </title>  <!--TODO: change title -->
 
-    <script src="http://d3js.org/d3.v4.min.js"></script> <!-- including D3 first -->
-
-    <script src="main.js"></script>
-
     <link rel="stylesheet" href="./style.css"> <!-- inclduing styles, and fonts? -->
 
 </head>
-
-
 <body>
     <div class="title"> 
         <h1> Choose Your Karoke Song </h1> 
-        <p> Intro paragraph into the dataset, what the slider does, and how to use it. </p> <!-- TODO: change this too -->
+        <p0> Intro paragraph into the dataset, what the slider does, and how to use it. </p0> <!-- TODO: change this too -->
 
     </div>     
         
@@ -27,7 +21,8 @@
                 <span class="fill">
                 </span>
             </span>
-            <input type="range" id="length_slider" class="length_slider" min="0" max ="100" value= "50">
+            <input type="range" id="length_slider" class="length_slider" min="0" max ="100" value= "0">
+            <p1> <span id= "length_slider_val"> </span> </p1>
         </div>
 
     </div>
@@ -49,11 +44,7 @@
 
         setBar();
     </script>
-
-    
-   
 </body>
-
-    <!-- TODO: add title for sliders, etc -->
-
+<script src="http://d3js.org/d3.v4.min.js"></script> <!-- including D3 first -->
+<script src="main.js"></script>
 </html>
