@@ -14,12 +14,42 @@ p0 { /* TODO: customize paragraph color, etc */
     color: black;
     font-size: 0.9em;
 }
-p1 {
+p1_val {
     position: relative; 
-    left: -30px;
+    left: -40px;
     bottom: -280px;
     text-align: "center";
+    font-size: 1.3em;
 }
+
+p1_label {
+    position: relative; 
+    left: -10px;
+    bottom: -290px;
+    text-align: "center";
+    font-size: 1em;
+}
+
+input[name=length_check] {
+    position: relative;
+    left: 5px;
+    bottom: -350px;
+    text-align: "center";
+    font-size: 1em;
+    transform: scale(1.5);
+}
+
+
+label[for=length_check] {
+    position: relative;
+    left: -40px;
+    bottom: -290px;
+    text-align: "center";
+    display:inline-block;
+    width: 100em;
+    font-size: 1em;
+}
+
 
 body {
     margin: 10px;
@@ -32,7 +62,7 @@ body {
     position: relative;
     width: 25px;
     height: 300px;
-    transform: translate(450%, 20%);
+    transform: translate(600%, 20%);
 }
 .slider-container .length_slider {
     position: absolute;    
