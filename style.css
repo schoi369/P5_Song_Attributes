@@ -355,3 +355,15 @@ input[type=range]::-webkit-slider-thumb {
 #danceability_range {
     background-image: linear-gradient(to right, cyan 0%, blue 100%);
 } 
+
+.song_list_container {
+    padding-top: 700px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.song_list {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 120px;
+}

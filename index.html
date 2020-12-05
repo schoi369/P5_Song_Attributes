@@ -34,14 +34,14 @@
     </div>    
     
     <div class = "button_container">
-        <button class = "filter_button" type="button"> Filter </button>
+        <button class = "filter_button" type="button" id="filter_button"> Filter </button>
     </div>
 
     <div class="soundboard">
         <div class="slider-container">
             <div class="multi-range-slider length">
-                <input type="range" id="length_slider_left"  min="0" max ="600" value= "100">
-                <input type="range" id="length_slider_right"  min="0" max ="600" value= "400">
+                <input type="range" id="length_slider_left"  min="0" max ="1500" value= "0">
+                <input type="range" id="length_slider_right"  min="0" max ="1500" value= "1500">
                 <p1_val_low> <span id= "length_slider_val_low"> </span> </p1_val_low>
                 <p1_val_high> <span id= "length_slider_val_high"> </span> </p1_val_high>
 
@@ -52,14 +52,14 @@
                     <div class="thumb right" id="length_thumb_right"></div>
                 </div>
 
-                <input type="checkbox" id="length_check" name="length_check"> </input> 
+                <input type="checkbox" id="length_check" name="length_check" checked> </input> 
                 <label for="length_check">Length (Duration)</label>
             </div>
         
 
             <div class="multi-range-slider energy">
-                <input type="range" id="energy_slider_left"  min="0" max ="600" value= "200">
-                <input type="range" id="energy_slider_right"  min="0" max ="600" value= "300">
+                <input type="range" id="energy_slider_left"  min="0" max ="100" value= "0">
+                <input type="range" id="energy_slider_right"  min="0" max ="100" value= "100">
                 <p1_val_low> <span id= "energy_slider_val_low"> </span> </p1_val_low>
                 <p1_val_high> <span id= "energy_slider_val_high"> </span> </p1_val_high> 
 
@@ -70,13 +70,13 @@
                     <div class="thumb right" id="energy_thumb_right"></div>
                 </div>
 
-                <input type="checkbox" id="energy_check" name="energy_check"> </input> 
+                <input type="checkbox" id="energy_check" name="energy_check" checked> </input> 
                 <label for="energy_check">Energy</label>
             </div>
 
             <div class="multi-range-slider speechiness">
-                <input type="range" id="speechiness_slider_left"  min="0" max ="600" value= "100">
-                <input type="range" id="speechiness_slider_right"  min="0" max ="600" value= "400">
+                <input type="range" id="speechiness_slider_left"  min="0" max ="55" value= "0">
+                <input type="range" id="speechiness_slider_right"  min="0" max ="55" value= "55">
                 <p1_val_low> <span id= "speechiness_slider_val_low"> </span> </p1_val_low>
                 <p1_val_high> <span id= "speechiness_slider_val_high"> </span> </p1_val_high>
 
@@ -87,13 +87,13 @@
                     <div class="thumb right" id="speechiness_thumb_right"></div>
                 </div>
 
-                <input type="checkbox" id="speechiness_check" name="speechiness_check"> </input> 
+                <input type="checkbox" id="speechiness_check" name="speechiness_check" checked> </input> 
                 <label for="speechiness_check">Speechiness</label>
             </div>
 
             <div class="multi-range-slider danceability">
-                <input type="range" id="danceability_slider_left"  min="0" max ="600" value= "250">
-                <input type="range" id="danceability_slider_right"  min="0" max ="600" value= "350">
+                <input type="range" id="danceability_slider_left"  min="0" max ="100" value= "0">
+                <input type="range" id="danceability_slider_right"  min="0" max ="100" value= "100">
                 <p1_val_low> <span id= "danceability_slider_val_low"> </span> </p1_val_low>
                 <p1_val_high> <span id= "danceability_slider_val_high"> </span> </p1_val_high>
 
@@ -103,13 +103,17 @@
                     <div class="thumb left" id="danceability_thumb_left"></div>
                     <div class="thumb right" id="danceability_thumb_right"></div>
                 </div>
-                <input type="checkbox" id="danceability_check" name="danceability_check"> </input> 
+                <input type="checkbox" id="danceability_check" name="danceability_check" checked> </input> 
                 <label for="danceability_check">Danceability</label>
 
             </div>
 
         </div>
     </div>
+
+    <div class = "song_list_container">
+        <ul class = "song_list" id = "song_list"></ul>
+    </div> 
 </body>
 
 <script src="http://d3js.org/d3.v4.min.js"></script> <!-- including D3 first -->

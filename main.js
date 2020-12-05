@@ -7,11 +7,27 @@ var svg = d3.select("body")
         .attr('width', width - margin.left - margin.right)
         .attr('height', height - margin.top - margin.bottom)
 
-// d3.csv("./data/songattributes.csv", function(data) {
-    
+//TODO: Preprocessing stuff, create sliders, filter, function update list of names
+// Preprocess data
+var data = []
+d3.csv("./data/songattributes.csv", function(csv) {
+    for (var i = 0; i < csv.length; i++) {
+		let song = csv[i];
+		let temp = {
+			"Title": song["Title"],
+			"Artist": song["Artist"],
+			"Year": song["Year"],
+			"Length": Number(song["Length (Duration)"]),
+			"Energy": Number(song["Energy"]),
+			"Speechiness": Number(song["Speechiness"]),
+			"Danceability": Number(song["Danceability"])
+			
+		};
+		data.push(temp);
+	}
 
-    // TODO: Preprocessing stuff, create sliders, filter, function update list of names
-// });
+	updateList();
+});
 
 
 //  LENGTH
@@ -27,6 +43,8 @@ length_slider_output_high.innerHTML = length_inputRight.value;
 var length_thumbLeft = document.querySelector("#length_thumb_left");
 var length_thumbRight = document.querySelector("#length_thumb_right");
 var length_range = document.querySelector("#length_range");
+
+var length_check = document.getElementById("length_check")
 
 
 
@@ -44,6 +62,7 @@ var energy_thumbLeft = document.querySelector("#energy_thumb_left");
 var energy_thumbRight = document.querySelector("#energy_thumb_right");
 var energy_range = document.querySelector("#energy_range");
 
+var energy_check = document.getElementById("energy_check")
 
 
 // SPEECHINESS
@@ -59,6 +78,8 @@ speechiness_slider_output_high.innerHTML = speechiness_inputRight.value;
 var speechiness_thumbLeft = document.querySelector("#speechiness_thumb_left");
 var speechiness_thumbRight = document.querySelector("#speechiness_thumb_right");
 var speechiness_range = document.querySelector("#speechiness_range");
+
+var speechiness_check = document.getElementById("speechiness_check")
 
 
 
@@ -76,6 +97,50 @@ var danceability_thumbLeft = document.querySelector("#danceability_thumb_left");
 var danceability_thumbRight = document.querySelector("#danceability_thumb_right");
 var danceability_range = document.querySelector("#danceability_range");
 
+var danceability_check = document.getElementById("danceability_check")
+
+
+// FILTER
+var filter_button = document.getElementById("filter_button");
+var song_list = document.getElementById("song_list")
+
+function updateList() {
+
+	// Get list of songs based on filter
+	let display_data = []
+	for (var i = 0; i < data.length; i++) {
+		let song = data[i];
+		let include = true;
+		if (length_check.checked && !(song.Length >= length_inputLeft.value && song.Length <= length_inputRight.value)) {
+			include = false;
+		}
+		if (energy_check.checked && !(song.Energy >= energy_inputLeft.value && song.Energy <= energy_inputRight.value)) {
+			include = false;
+		}
+		if (speechiness_check.checked && !(song.Speechiness >= speechiness_inputLeft.value && song.Speechiness <= speechiness_inputRight.value)) {
+			include = false;
+		}
+		if (danceability_check.checked && !(song.Danceability >= danceability_inputLeft.value && song.Danceability <= danceability_inputRight.value)) {
+			include = false;
+		}
+		if (include) {
+			display_data.push(song);
+		}
+	}
+
+	// Clear current displayed list
+	song_list.innerHTML = "";
+
+	// Display new list of songs based on filter
+	for (var i = 0; i < display_data.length; i++) {
+		list_item = document.createElement("li");
+		list_item.innerHTML = display_data[i].Title;
+		song_list.appendChild(list_item)
+	}
+
+	console.log("New list length: " + display_data.length);
+};
+filter_button.addEventListener("click", updateList);
 
 
 // UPDATES LENGTH HIGH/LOW TEXT BOXES
