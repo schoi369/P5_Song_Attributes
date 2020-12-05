@@ -10,31 +10,84 @@
 </head>
 <body>
     <div class="title"> 
-        <h1> Choose Your Karoke Song </h1> 
+        <h1> Choose Your Karaoke Song </h1> 
         <p0> Intro paragraph into the dataset, what the slider does, and how to use it. </p0> <!-- TODO: change this too -->
 
     </div>     
         
     <div class="soundboard">
         <div class="slider-container">
-            <div class="multi-range-slider">
+            <div class="multi-range-slider length">
                 <input type="range" id="length_slider_left"  min="0" max ="600" value= "100">
                 <input type="range" id="length_slider_right"  min="0" max ="600" value= "400">
                 <p1_val_low> <span id= "length_slider_val_low"> </span> </p1_val_low>
                 <p1_val_high> <span id= "length_slider_val_high"> </span> </p1_val_high>
 
                 <div class="slider">
-                    <div class="track"></div>
-                    <div class="range"></div>
-                    <div class="thumb left"></div>
-                    <div class="thumb right"></div>
+                    <div class="track" id="length_track"></div>
+                    <div class="range" id="length_range"></div>
+                    <div class="thumb left" id="length_thumb_left"></div>
+                    <div class="thumb right" id="length_thumb_right"></div>
                 </div>
-            </div>
-            <input type="checkbox" id="length_check" name="length_check"> </input> 
-            <label for="length_check">Length (Duration)</label>
 
-            <!-- Energy, speechiness, danceability will be the other three sliders -->
+                <input type="checkbox" id="length_check" name="length_check"> </input> 
+                <label for="length_check">Length (Duration)</label>
+            </div>
+        
+
+            <div class="multi-range-slider energy">
+                <input type="range" id="energy_slider_left"  min="0" max ="600" value= "200">
+                <input type="range" id="energy_slider_right"  min="0" max ="600" value= "300">
+                <p1_val_low> <span id= "energy_slider_val_low"> </span> </p1_val_low>
+                <p1_val_high> <span id= "energy_slider_val_high"> </span> </p1_val_high> 
+
+                <div class="slider">
+                    <div class="track" id="energy_track"></div>
+                    <div class="range" id="energy_range"></div>
+                    <div class="thumb left" id="energy_thumb_left"></div>
+                    <div class="thumb right" id="energy_thumb_right"></div>
+                </div>
+
+                <input type="checkbox" id="energy_check" name="energy_check"> </input> 
+                <label for="energy_check">Energy</label>
+            </div>
+
+            <div class="multi-range-slider speechiness">
+                <input type="range" id="speechiness_slider_left"  min="0" max ="600" value= "100">
+                <input type="range" id="speechiness_slider_right"  min="0" max ="600" value= "400">
+                <p1_val_low> <span id= "speechiness_slider_val_low"> </span> </p1_val_low>
+                <p1_val_high> <span id= "speechiness_slider_val_high"> </span> </p1_val_high>
+
+                <div class="slider">
+                    <div class="track" id="speechiness_track"></div>
+                    <div class="range" id="speechiness_range"></div>
+                    <div class="thumb left" id="speechiness_thumb_left"></div>
+                    <div class="thumb right" id="speechiness_thumb_right"></div>
+                </div>
+
+                <input type="checkbox" id="speechiness_check" name="speechiness_check"> </input> 
+                <label for="speechiness_check">Speechiness</label>
+            </div>
+
+            <div class="multi-range-slider danceability">
+                <input type="range" id="danceability_slider_left"  min="0" max ="600" value= "250">
+                <input type="range" id="danceability_slider_right"  min="0" max ="600" value= "350">
+                <p1_val_low> <span id= "danceability_slider_val_low"> </span> </p1_val_low>
+                <p1_val_high> <span id= "danceability_slider_val_high"> </span> </p1_val_high>
+
+                <div class="slider">
+                    <div class="track" id="danceability_track"></div>
+                    <div class="range" id="danceability_range"></div>
+                    <div class="thumb left" id="danceability_thumb_left"></div>
+                    <div class="thumb right" id="danceability_thumb_right"></div>
+                </div>
+
+                <input type="checkbox" id="danceability_check" name="danceability_check"> </input> 
+                <label for="danceability_check">Danceability</label>
+            </div>
+
         </div>
+    </div>
 
     </div>
 
