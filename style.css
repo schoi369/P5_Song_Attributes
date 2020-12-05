@@ -1,16 +1,88 @@
-.title {
-    text-align: center;
-    font-family: "Verdana";  /* TODO: research a nice font and change this temp */
+* {
+    padding: 0;
+    margin: 0;
 }
 
-h1 { /* TODO: customize header color, font etc */
+/* Header Settings */
+header {
+    background: #191414;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.title {
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.material-icons {
+    vertical-align: middle;
+}
+
+.title_text {
+    font-size: 28px;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    vertical-align: middle;
+}
+
+/* Below is for the text on the top right side */
+/* .title_info {
+    font-size: 14px;
+    font-family: 'Lato', sans-serif;
+    color: #ffffff;
+    vertical-align: middle;
+    float: right;
+} */
+
+.main_text_container {
+    padding-top: 30px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.button_container {
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.filter_button {
+    background-color: #ffffff;
+    border: none;
     color: black;
-    font-size: 2.0em;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    display: inline-block;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 32px;
+}
+
+.filter_button:hover {
+    box-shadow:200px 0 0 0 rgba(29, 183, 84, 1) inset;
+}
+
+  
+
+h1 { /* TODO: customize header color, font etc */
+    color: rgb(255, 255, 255);
+    font-size: 4.0em;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
 }
 
 p0 { /* TODO: customize paragraph color, etc */
-    color: black;
-    font-size: 0.9em;
+    color: rgb(0, 0, 0);
+    font-size: 1.2em;
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+}
+
+.soundboard {
+    margin-left: -120px;
 }
 
 /* CODE FOR EACH SLIDER'S LOW/HIGH TEXT BOXES */
@@ -64,7 +136,7 @@ p0 { /* TODO: customize paragraph color, etc */
 }
 
 
- #danceability_slider_val_low {
+#danceability_slider_val_low {
     position: fixed;
     left: 740px;
     bottom: -190px; 
@@ -159,12 +231,12 @@ label[for=danceability_check] {
 
 
 body {
-    margin: 10px;
+    padding: 0;
+    margin: 0;
     justify-content: center;
     align-items: center;
-    background-color: grey; /* TODO: change to something nice */
+    background-color: #1ed760;
 }
-
 
 /* Below slider stuff from: https://www.youtube.com/watch?v=xVR7bPGKvlY */
 
