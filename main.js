@@ -139,7 +139,6 @@ function updateList() {
 		song_list.appendChild(list_item)
 	}
 
-	console.log("New list length: " + display_data.length);
 };
 filter_button.addEventListener("click", updateList);
 

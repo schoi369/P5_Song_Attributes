@@ -164,7 +164,7 @@ input[name=length_check] {
 }
 label[for=length_check] {
     position: fixed;
-    left: 189px;
+    left: 229px;
     bottom: -315px;
     text-align: "center";
     display:inline-block;
