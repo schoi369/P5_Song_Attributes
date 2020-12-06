@@ -168,7 +168,7 @@ label[for=length_check] {
     bottom: -315px;
     text-align: "center";
     display:inline-block;
-    width: 100em;
+    max-width: 50em;
     font-size: 1.2em;
 }
 
@@ -187,7 +187,7 @@ label[for=energy_check] {
     bottom: -315px;
     text-align: "center";
     display:inline-block;
-    width: 100em;
+    max-width: 50em;
     font-size: 1.2em;
 }
 
@@ -206,7 +206,7 @@ label[for=speechiness_check] {
     bottom: -315px;
     text-align: "center";
     display:inline-block;
-    width: 100em;
+    max-width: 50em;
     font-size: 1.2em;
 }
 
@@ -225,7 +225,7 @@ label[for=danceability_check] {
     bottom: -315px;
     text-align: "center";
     display:inline-block;
-    width: 100em;
+    max-width: 50em;
     font-size: 1.2em;
 }
 
@@ -360,6 +360,7 @@ input[type=range]::-webkit-slider-thumb {
     padding-top: 700px;
     padding-left: 120px;
     padding-right: 120px;
+    max-width: 50em;
 }
 
 .song_list {
