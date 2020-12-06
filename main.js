@@ -135,6 +135,7 @@ function updateList() {
 	for (var i = 0; i < display_data.length; i++) {
 		list_item = document.createElement("li");
 		list_item.innerHTML = display_data[i].Title;
+		list_item.title = display_data[i].Artist;
 		song_list.appendChild(list_item)
 	}
 
