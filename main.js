@@ -153,7 +153,7 @@ function updateList() {
 		list_item = document.createElement("li");
 		list_item.innerHTML = display_data[i].Title;
 		list_item.title = display_data[i].Artist + " " + display_data[i].Year;
-		song_list.appendChild(list_item)
+		song_list.appendChild(list_item);
 	}
 
 };

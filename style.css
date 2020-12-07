@@ -5,7 +5,7 @@
 
 /* Header Settings */
 header {
-    background: #191414;
+    background: black;
     padding-top: 15px;
     padding-bottom: 15px;
 }
@@ -65,17 +65,19 @@ header {
     box-shadow:200px 0 0 0 rgba(29, 183, 84, 1) inset;
 }
 
+
   
 
 h1 { /* TODO: customize header color, font etc */
-    color: rgb(255, 255, 255);
+    /* color: rgb(255, 255, 255); */
+    color: #1ed760;
     font-size: 4.0em;
     text-align: left;
     font-family: 'Lato', sans-serif;
 }
 
 p0 { /* TODO: customize paragraph color, etc */
-    color: rgb(0, 0, 0);
+    color: white;
     font-size: 1.2em;
     text-align: left;
     font-family: 'Lato', sans-serif;
@@ -83,6 +85,8 @@ p0 { /* TODO: customize paragraph color, etc */
 
 .soundboard {
     margin-left: -120px;
+    font-family: 'Lato', sans-serif;
+    color: #1ed760;
 }
 
 /* CODE FOR EACH SLIDER'S LOW/HIGH TEXT BOXES */
@@ -235,7 +239,8 @@ body {
     margin: 0;
     justify-content: center;
     align-items: center;
-    background-color: #1ed760;
+    /* background-color: #1ed760; */
+    background-color: #191414;
 }
 
 /* Below slider stuff from: https://www.youtube.com/watch?v=xVR7bPGKvlY */
@@ -259,26 +264,29 @@ body {
  .slider > .track {
 	position: absolute;
     z-index: 1;
-    height: 250%;
+    height: 100%;
+    transform: translate(0px, 6px);
 	left: -15px;
 	right: -15px;
 	top: 0;
     bottom: 0;
 	border-radius: 5px;
-	background-color: rgba(0,0,0,.2);
+	background-color: rgba(100, 100, 100, 0.2);
 }
 
 .slider > .range {
 	position: absolute;
     z-index: 2;
-    height: 250%;
+    height: 100%;
+    transform: translate(0px, 6px);
 	left: 25%;
 	right: 25%;
 	top: 0;
 	bottom: 0;
 	border-radius: 5px;
     /* background-color: #6200ee; */
-    background-image: linear-gradient(to right, #ffe536 0%, #ff2525 100%);
+    /* background-image: linear-gradient(to right, #ffe536 0%, #ff2525 100%); */
+    background: #1ed760;
 } 
 .slider > .thumb {
 	position: absolute;
@@ -288,20 +296,20 @@ body {
 	background-color: #6200ee;
 	border-radius: 50%;
     transition: box-shadow .3s ease-in-out;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    border: 1px solid #000000;
-    height: 36px;
-    width: 16px;
-    border-radius: 3px;
+    /* box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; */
+    border: 0px solid #000000;
+    height: 18px;
+    width: 18px;
+    /* border-radius: 12px; */
     background: #ffffff;
 }
 .slider > .thumb.left {
 	left: 25%;
-	transform: translate(-15px, -8px) scale(1.3);
+	transform: translate(-15px, 2px) scale(1.3);
 }
 .slider > .thumb.right {
 	right: 25%;
-	transform: translate(15px, -8px) scale(1.3);
+	transform: translate(15px, 2px) scale(1.3);
 }
 
 
@@ -333,7 +341,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #energy_range {
-    background-image: linear-gradient(to right, lime 0%, darkgreen 100%);
+    background: #1ed760;
 } 
 
 .speechiness{
@@ -343,7 +351,7 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #speechiness_range {
-    background-image: linear-gradient(to right, pink 0%, purple 100%);
+    background: #1ed760;
 } 
 
 .danceability {  
@@ -353,18 +361,23 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 #danceability_range {
-    background-image: linear-gradient(to right, cyan 0%, blue 100%);
+    background: #1ed760;
 } 
 
 .song_list_container {
     padding-top: 700px;
     padding-left: 120px;
     padding-right: 120px;
-    max-width: 50em;
+    /* max-width: 50em; */
+    background: #191414;
 }
 
 .song_list {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 120px;
+    font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
+    line-height: 200%;
+    color: white;
 }
