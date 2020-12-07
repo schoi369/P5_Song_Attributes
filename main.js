@@ -7,7 +7,6 @@ var svg = d3.select("body")
         .attr('width', width - margin.left - margin.right)
         .attr('height', height - margin.top - margin.bottom)
 
-//TODO: Preprocessing stuff, create sliders, filter, function update list of names
 // Preprocess data
 var data = []
 d3.csv("./data/songattributes.csv", function(csv) {
@@ -117,8 +116,6 @@ danceability_check.addEventListener("change", updateList)
 
 
 // FILTER
-// var filter_button = document.getElementById("filter_button");
-// filter_button.addEventListener("click", updateList);
 var song_list = document.getElementById("song_list")
 
 function updateList() {
@@ -161,7 +158,6 @@ function updateList() {
 
 
 // UPDATES LENGTH HIGH/LOW TEXT BOXES
-
 function setLeftValueLength() {
 	var _this = length_inputLeft,
 		min = parseInt(_this.min),
@@ -270,7 +266,6 @@ speechiness_inputRight.addEventListener("input", setRightValueSpeechiness);
 
 
 // UPDATES DANCEABILITY HIGH/LOW TEXT BOXES
-
 function setLeftValueDanceability() {
 	var _this = danceability_inputLeft,
 		min = parseInt(_this.min),
@@ -286,7 +281,6 @@ function setLeftValueDanceability() {
 	
 }
 setLeftValueDanceability();
-
 
 
 function setRightValueDanceability() {
