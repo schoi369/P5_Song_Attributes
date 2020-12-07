@@ -32,7 +32,10 @@ d3.csv("./data/songattributes.csv", function(csv) {
 
 //  LENGTH
 var length_inputLeft = document.getElementById("length_slider_left");
+length_inputLeft.addEventListener("change", updateList)
+
 var length_inputRight = document.getElementById("length_slider_right");
+length_inputRight.addEventListener("change", updateList)
 
 var length_slider_output_low = document.getElementById("length_slider_val_low");
 var length_slider_output_high= document.getElementById("length_slider_val_high");
@@ -45,12 +48,15 @@ var length_thumbRight = document.querySelector("#length_thumb_right");
 var length_range = document.querySelector("#length_range");
 
 var length_check = document.getElementById("length_check")
+length_check.addEventListener("change", updateList)
 
 
 
 // ENERGY
 var energy_inputLeft = document.getElementById("energy_slider_left");
+energy_inputLeft.addEventListener("change", updateList)
 var energy_inputRight = document.getElementById("energy_slider_right");
+energy_inputRight.addEventListener("change", updateList)
 
 var energy_slider_output_low = document.getElementById("energy_slider_val_low");
 var energy_slider_output_high= document.getElementById("energy_slider_val_high");
@@ -63,11 +69,15 @@ var energy_thumbRight = document.querySelector("#energy_thumb_right");
 var energy_range = document.querySelector("#energy_range");
 
 var energy_check = document.getElementById("energy_check")
+energy_check.addEventListener("change", updateList)
 
 
 // SPEECHINESS
 var speechiness_inputLeft = document.getElementById("speechiness_slider_left");
+speechiness_inputLeft.addEventListener("change", updateList)
+
 var speechiness_inputRight = document.getElementById("speechiness_slider_right");
+speechiness_inputRight.addEventListener("change", updateList)
 
 var speechiness_slider_output_low = document.getElementById("speechiness_slider_val_low");
 var speechiness_slider_output_high= document.getElementById("speechiness_slider_val_high");
@@ -80,12 +90,16 @@ var speechiness_thumbRight = document.querySelector("#speechiness_thumb_right");
 var speechiness_range = document.querySelector("#speechiness_range");
 
 var speechiness_check = document.getElementById("speechiness_check")
+speechiness_check.addEventListener("change", updateList)
 
 
 
 // DANCEABILITY
 var danceability_inputLeft = document.getElementById("danceability_slider_left");
+danceability_inputLeft.addEventListener("change", updateList)
+
 var danceability_inputRight = document.getElementById("danceability_slider_right");
+danceability_inputRight.addEventListener("change", updateList)
 
 var danceability_slider_output_low = document.getElementById("danceability_slider_val_low");
 var danceability_slider_output_high= document.getElementById("danceability_slider_val_high");
@@ -98,10 +112,13 @@ var danceability_thumbRight = document.querySelector("#danceability_thumb_right"
 var danceability_range = document.querySelector("#danceability_range");
 
 var danceability_check = document.getElementById("danceability_check")
+danceability_check.addEventListener("change", updateList)
+
 
 
 // FILTER
-var filter_button = document.getElementById("filter_button");
+// var filter_button = document.getElementById("filter_button");
+// filter_button.addEventListener("click", updateList);
 var song_list = document.getElementById("song_list")
 
 function updateList() {
@@ -140,7 +157,7 @@ function updateList() {
 	}
 
 };
-filter_button.addEventListener("click", updateList);
+
 
 
 // UPDATES LENGTH HIGH/LOW TEXT BOXES
