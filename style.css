@@ -26,55 +26,20 @@ header {
     vertical-align: middle;
 }
 
-/* Below is for the text on the top right side */
-/* .title_info {
-    font-size: 14px;
-    font-family: 'Lato', sans-serif;
-    color: #ffffff;
-    vertical-align: middle;
-    float: right;
-} */
-
 .main_text_container {
     padding-top: 30px;
     padding-left: 120px;
     padding-right: 120px;
 }
 
-.button_container {
-    display: flex;
-    align-items: center;
-    justify-content: center;  
-}
-
-.filter_button {
-    background-color: #ffffff;
-    border: none;
-    color: black;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 18px;
-    font-family: 'Lato', sans-serif;
-    display: inline-block;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 32px;
-}
-
-.filter_button:hover {
-    box-shadow:200px 0 0 0 rgba(29, 183, 84, 1) inset;
-}
-
-  
-
-h1 { /* TODO: customize header color, font etc */
+h1 {
     color: rgb(255, 255, 255);
     font-size: 4.0em;
     text-align: left;
     font-family: 'Lato', sans-serif;
 }
 
-p0 { /* TODO: customize paragraph color, etc */
+p0 {
     color: rgb(0, 0, 0);
     font-size: 1.2em;
     text-align: left;
@@ -85,6 +50,7 @@ p0 { /* TODO: customize paragraph color, etc */
     margin-left: -120px;
 }
 
+
 /* CODE FOR EACH SLIDER'S LOW/HIGH TEXT BOXES */
 #length_slider_val_low{
     position: fixed;
@@ -92,6 +58,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: -190px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 #length_slider_val_high {
     position: fixed; 
@@ -99,6 +66,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: 265px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -108,6 +76,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: -190px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 
 #energy_slider_val_high {
@@ -116,6 +85,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: 265px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 } 
 
 
@@ -125,6 +95,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: -190px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 
 #speechiness_slider_val_high {
@@ -133,6 +104,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: 265px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -142,6 +114,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: -190px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 
 #danceability_slider_val_high {
@@ -150,6 +123,7 @@ p0 { /* TODO: customize paragraph color, etc */
     bottom: 265px; 
     text-align: "center";
     font-size: 1.3em;
+    font-family: 'Lato', sans-serif;
 }
 
 /* CODE FOR EACH SLIDER'S LABEL AND CHECKBOX */
@@ -170,6 +144,7 @@ label[for=length_check] {
     display:inline-block;
     max-width: 50em;
     font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -189,6 +164,7 @@ label[for=energy_check] {
     display:inline-block;
     max-width: 50em;
     font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -208,6 +184,7 @@ label[for=speechiness_check] {
     display:inline-block;
     max-width: 50em;
     font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -227,6 +204,7 @@ label[for=danceability_check] {
     display:inline-block;
     max-width: 50em;
     font-size: 1.2em;
+    font-family: 'Lato', sans-serif;
 }
 
 
@@ -367,4 +345,5 @@ input[type=range]::-webkit-slider-thumb {
     padding-top: 30px;
     padding-left: 30px;
     padding-right: 120px;
+    font-family: 'Lato', sans-serif;
 }
